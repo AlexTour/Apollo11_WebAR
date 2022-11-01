@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>&lt;model-viewer&gt; template</title>
+    <meta charset="utf-8">
+    <meta name="description" content="&lt;model-viewer&gt; template">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link type="text/css" href="./styles.css" rel="stylesheet"/>
+    <!-- OPTIONAL: The :focus-visible polyfill removes the focus ring for some input types -->
+    <script src="https://unpkg.com/focus-visible@5.0.2/dist/focus-visible.js" defer></script>
+  </head>
+  <body>
+    <div>
+      <img class="cwm-logo-responsive" src="Assets/cwm-logo.png" alt="cwm-logo">
+    </div>
+    <div>
+      <img class="space_codename-responsive" src="Assets/space_codename.png" alt="space_codename">
+    </div>
+
+    <!-- <model-viewer> HTML element -->
+    <model-viewer bounds="tight" src="Apollo_11_WebAR_final.glb" ar ar-modes="scene-viewer quick-look" touch-action="none" camera-controls environment-image="alps_field_4k.hdr" poster="poster.webp" shadow-intensity="1" exposure="0.85" shadow-softness="0.1">
+      <div class="progress-bar hide" slot="progress-bar">
+          <div class="update-bar"></div>
+      </div>
+      <button slot="ar-button" id="ar-button">
+          VIEW IN YOUR SPACE
+      </button>
+      <div id="ar-prompt">
+          <img src="ar_hand_prompt.png">
+      </div>
+    </model-viewer>
+    <div>
+      <img class="cwm-banner-responsive" src="Assets/cwm_banner.png" alt="cwm_banner">
+    </div>
+      <div>
+      <img class="cwm-frame-responsive" src="Assets/cwm_frame.png" alt="cwm_frame">
+    </div>
+    </div>  
+    <script src="script.js"></script>
+    <!-- Loads <model-viewer> for browsers: -->
+    <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+  </body>
+</html>
